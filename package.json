@@ -1,0 +1,26 @@
+{
+  "name": "vue-async-component",
+  "version": "1.0.0",
+  "description": "Vue AsyncComponent",
+  "main": "index.js",
+  "repository": "https://github.com/xyunz/vue-async-component.git",
+  "author": "yuechao.xiao",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c -w",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@rollup/plugin-typescript": "^4.1.1",
+    "@types/jest": "^25.2.1",
+    "babel-standalone": "^6.26.0",
+    "jest": "^25.3.0",
+    "less": "^3.11.1",
+    "rollup": "^2.6.1",
+    "ts-jest": "^25.3.1",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3",
+    "vue": "^2.6.11"
+  }
+}

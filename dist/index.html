@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue AsyncComponent</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/codemirror@5.52.2/lib/codemirror.min.css" />
+  <link rel="stylesheet" type="text/css" href="index.css" />
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/codemirror@5.52.2/lib/codemirror.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/codemirror@5.52.2/addon/hint/show-hint.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/codemirror@5.52.2/addon/mode/overlay.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/codemirror@5.52.2/mode/xml/xml.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/codemirror@5.52.2/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/codemirror@5.52.2/mode/javascript/javascript.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/codemirror@5.52.2/mode/vue/vue.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-codemirror@4.0.6/dist/vue-codemirror.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="panel">
+      <div class="editors">
+        <div class="editor-wrapper">
+          <span class="editor-file-name">index.html</span>
+          <codemirror class="editor" v-model="indexCode" :options="editorOptions"></codemirror>
+        </div>
+        <div class="editor-wrapper">
+          <span class="editor-file-name">my-component.vue</span>
+          <codemirror class="editor" v-model="componentCode" :options="editorOptions"></codemirror>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="preview-wrapper">
+        <div>
+          <button @click="run">执行代码</button>
+          <hr>
+        </div>
+        <iframe ref="preview" class="preview"></iframe>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
